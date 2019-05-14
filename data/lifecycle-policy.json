@@ -1,0 +1,17 @@
+{
+    "rules": [
+      {
+        "rulePriority": 10,
+        "description": "Keep maximum of 50 images",
+        "selection": {
+          "tagStatus": "any",
+          "countType": "imageCountMoreThan",
+          "countNumber": 50
+        },
+        "action": {
+          "type": "expire"
+        }
+      }
+    ]
+  }
+  
