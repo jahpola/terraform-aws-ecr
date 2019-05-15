@@ -4,6 +4,12 @@ data "local_file" "lifecycle-policy-json" {
 
 resource "aws_ecr_repository" "this-registery" {
   name = "${var.project}/${var.product}"
+
+  tags {
+    Project   = "${var.project}"
+    Product   = "${var.product}"
+    Terraform = "True"
+  }
 }
 
 resource "aws_ecr_lifecycle_policy" "registery-lifecycle-policy" {
